@@ -21,5 +21,16 @@ public class LinkListUtil {
 
 		return node;
 	}
+	
+	public static LinkedList createLinkList() {
+		LinkedList head = LinkListUtil.createHead(3);
+		LinkedList nod1 = LinkListUtil.createNode(4);
+		LinkedList nod2 = LinkListUtil.createNode(5);
+		LinkedList nod3 = LinkListUtil.createNode(6);
+		LinkListUtil.linkNode1ToNode2(head, nod1);
+		LinkListUtil.linkNode1ToNode2(nod1, nod2);
+		LinkListUtil.linkNode1ToNode2(nod2, nod3);
+		return head;
+	}
 
 }
