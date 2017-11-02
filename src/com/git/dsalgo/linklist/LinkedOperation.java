@@ -77,6 +77,40 @@ public class LinkedOperation {
 		return head;
 		
 	}
+	
+	
+	public LinkedList swapNodesInPair(LinkedList head) {
+		if (head == null) {
+			return null;
+		}
+		
+		LinkedList temp1 = null;
+		LinkedList newHead = null;
+		
+		while(head != null ) {
+			
+			if(temp1 != null) {
+				temp1.getNextNode().setNextNode(head.getNextNode());
+			}
+			
+			temp1 = head.getNextNode();
+			head.setNextNode(head.getNextNode().getNextNode());
+			
+			temp1.setNextNode(head);
+			
+			head = head.getNextNode();
+			
+			if (newHead == null) {
+				newHead = temp1;
+			}
+			
+		}
+		return newHead;
+		
+		
+		
+		
+	}
 
 
 }
