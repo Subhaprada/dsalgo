@@ -1,3 +1,3 @@
 # dsalgo
 
-This project can be used for dsalgo of variuos solution
+This project meant  for dsalgo of variuos solution
